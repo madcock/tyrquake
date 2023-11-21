@@ -403,6 +403,8 @@ double Sys_DoubleTime(void)
    newtime = sysGetSystemTime() / 1000000.0;
 #elif defined(__PS3__)
    newtime = sys_time_get_system_time() / 1000000.0;
+#elif defined(SF2000)
+   newtime = clock() / 1000000.0;
 #elif defined(_WIN32)
    static double pfreq;
    static __int64 startcount;
