@@ -69,7 +69,7 @@ struct retro_core_option_definition option_defs_us[] = {
       },
 #if defined(_3DS)
       "400x240"
-#elif defined(DINGUX)
+#elif defined(DINGUX) || defined(SF2000)
       "320x240"
 #else
       "320x200"
@@ -111,7 +111,7 @@ struct retro_core_option_definition option_defs_us[] = {
       "25"
 #elif defined(_MIYOO)
       "15"
-#elif defined(DINGUX)
+#elif defined(DINGUX) || defined(SF2000)
       "30"
 #else
       "auto"

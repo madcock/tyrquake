@@ -94,7 +94,7 @@ static bool libretro_supports_bitmasks = false;
 #define DEFAULT_MEMSIZE_MB 8
 #elif defined(WIIU)
 #define DEFAULT_MEMSIZE_MB 32
-#elif defined(HW_RVL) || defined(_XBOX1) 
+#elif defined(HW_RVL) || defined(_XBOX1) || defined(SF2000)
 #define DEFAULT_MEMSIZE_MB 24
 #else
 #define DEFAULT_MEMSIZE_MB 32
@@ -1107,7 +1107,7 @@ bool retro_load_game(const struct retro_game_info *info)
       char tmp_dir[PATH_MAX_LENGTH];
       tmp_dir[0] = '\0';
 
-#if (defined(HW_RVL) && !defined(WIIU)) || defined(_XBOX1)
+#if (defined(HW_RVL) && !defined(WIIU)) || defined(_XBOX1) || defined(SF2000)
       MEMSIZE_MB = 16;
 #endif
       extract_directory(tmp_dir, g_rom_dir, sizeof(tmp_dir));
